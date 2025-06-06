@@ -1,0 +1,28 @@
+﻿<Window x:Class="ProjectileSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Angry Birds -_-" Height="600" Width="800">
+    <Grid Margin="10">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Width="200">
+            <TextBlock Text="Начальная скорость (м/с):"/>
+            <TextBox x:Name="VelocityBox" Text="60.0"/>
+
+            <TextBlock Text="Угол (градусы):"/>
+            <TextBox x:Name="AngleBox" Text="45.0"/>
+
+            <TextBlock Text="Шаг по времени (сек):"/>
+            <TextBox x:Name="TimeStepBox" Text="0.1"/>
+
+            <TextBlock Text="Коэффициент сопротивления (k):"/>
+            <TextBox x:Name="DragBox" Text="0.01"/>
+
+            <TextBlock Text="Масса тела (кг):"/>
+            <TextBox x:Name="MassBox" Text="1.0"/>
+
+
+            <Button x:Name="StartButton" Content="Старт" Click="Start_Click" Margin="0,10,0,0"/>
+        </StackPanel>
+
+        <Canvas x:Name="SimulationCanvas" Background="LightGray" Margin="220,0,0,0" Height="560"/>
+    </Grid>
+</Window>
